@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+</head>
+<body>
+    <h1>Gestión de Productos</h1>
+
+    <div>
+        <h3>Lista de Productos</h3>
+        <button id="getProducts">Obtener Productos</button>
+        <ul id="productList"></ul>
+    </div>
+
+    <div>
+        <h3>Añadir Producto</h3>
+        <form id="addProductForm">
+            <label for="productName">Nombre del Producto:</label>
+            <input type="text" id="productName" required>
+
+            <label for="productPrice">Precio:</label>
+            <input type="number" id="productPrice" required>
+
+            <label for="productAvailability">Disponibilidad:</label>
+            <select id="productAvailability">
+                <option value="1">Disponible</option>
+                <option value="0">No disponible</option>
+            </select>
+
+            <label for="productDate">Fecha de Carga:</label>
+            <input type="date" id="productDate" required value="<?= date('Y-m-d') ?>">
+
+            <label for="productCustomizable">Personalizable:</label>
+            <select id="productCustomizable">
+                <option value="1">Sí</option>
+                <option value="0">No</option>
+            </select>
+
+            <label for="productArtisanId">ID del Artesano:</label>
+            <input type="number" id="productArtisanId" required>
+
+            <label for="productCategory">Categoría:</label>
+            <input type="text" id="productCategory" required>
+
+            <label for="productDescription">Descripción:</label>
+            <textarea id="productDescription" rows="3" required></textarea>
+
+            <label for="productMaterial">Material:</label>
+            <input type="text" id="productMaterial" required>
+
+            <button type="submit">Añadir Producto</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Actualizar Producto</h3>
+        <label for="productIdUpdate">ID del Producto:</label>
+        <input type="number" id="productIdUpdate" required>
+        
+        <label for="updatedName">Nuevo Nombre:</label>
+        <input type="text" id="updatedName">
+        
+        <label for="updatedPrice">Nuevo Precio:</label>
+        <input type="number" id="updatedPrice">
+        
+        <!-- Puedes agregar aquí más campos opcionales para actualizar -->
+        
+        <button id="updateProduct">Actualizar Producto</button>
+    </div>
+
+    <div>
+        <h3>Eliminar Producto</h3>
+        <label for="productIdDelete">ID del Producto:</label>
+        <input type="number" id="productIdDelete" required>
+        <button id="deleteProduct">Eliminar Producto</button>
+    </div>
+
+    <div id="message"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

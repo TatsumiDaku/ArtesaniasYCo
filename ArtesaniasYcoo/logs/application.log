@@ -1,0 +1,135 @@
+2024-11-18T09:26:42.352-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] b.d.a.A.ArtesaniasYcooApplication        : Starting ArtesaniasYcooApplication using Java 17.0.10 with PID 4504 (E:\SENA\SENAAA PROGRAMACION\CuartoTrimestre\Base Proyecto Spring\ArtesaniasYcoo\ArtesaniasYcoo\target\classes started by SENA in E:\SENA\SENAAA PROGRAMACION\CuartoTrimestre\Base Proyecto Spring\ArtesaniasYcoo)
+2024-11-18T09:26:42.354-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] b.d.a.A.ArtesaniasYcooApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-18T09:26:43.171-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-18T09:26:43.269-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 10 JPA repository interfaces.
+2024-11-18T09:26:43.844-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-18T09:26:43.857-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-18T09:26:43.858-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-18T09:26:43.925-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-18T09:26:43.926-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1499 ms
+2024-11-18T09:26:44.063-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-18T09:26:44.223-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c241a9f
+2024-11-18T09:26:44.225-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-18T09:26:44.550-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] liquibase.command                        : Logging exception.
+2024-11-18T09:26:44.550-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] liquibase.ui                             : ERROR: Exception Details
+2024-11-18T09:26:44.551-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] liquibase.ui                             : ERROR: Exception Primary Class:  ChangeLogParseException
+2024-11-18T09:26:44.551-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] liquibase.ui                             : ERROR: Exception Primary Reason:  classpath:/db/changelog/db.changelog-master.yaml does not exist
+2024-11-18T09:26:44.551-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] liquibase.ui                             : ERROR: Exception Primary Source:  4.27.0
+2024-11-18T09:26:44.551-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] liquibase.command                        : Command execution complete
+2024-11-18T09:26:44.553-05:00  WARN 4504 --- [ArtesaniasYcoo] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: classpath:/db/changelog/db.changelog-master.yaml does not exist
+2024-11-18T09:26:44.553-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-18T09:26:44.580-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-18T09:26:44.583-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-18T09:26:44.590-05:00  INFO 4504 --- [ArtesaniasYcoo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-18T09:26:44.608-05:00 ERROR 4504 --- [ArtesaniasYcoo] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:/db/changelog/db.changelog-master.yaml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-11-18T09:28:08.099-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] b.d.a.A.ArtesaniasYcooApplication        : Starting ArtesaniasYcooApplication using Java 17.0.10 with PID 7792 (E:\SENA\SENAAA PROGRAMACION\CuartoTrimestre\Base Proyecto Spring\ArtesaniasYcoo\ArtesaniasYcoo\target\classes started by SENA in E:\SENA\SENAAA PROGRAMACION\CuartoTrimestre\Base Proyecto Spring\ArtesaniasYcoo)
+2024-11-18T09:28:08.106-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] b.d.a.A.ArtesaniasYcooApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-18T09:28:08.935-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-18T09:28:09.043-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 10 JPA repository interfaces.
+2024-11-18T09:28:09.621-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-18T09:28:09.633-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-18T09:28:09.634-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-18T09:28:09.696-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-18T09:28:09.697-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1520 ms
+2024-11-18T09:28:09.837-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-18T09:28:09.999-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@384fda47
+2024-11-18T09:28:10.000-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-18T09:28:10.333-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] liquibase.command                        : Logging exception.
+2024-11-18T09:28:10.333-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] liquibase.ui                             : ERROR: Exception Details
+2024-11-18T09:28:10.333-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] liquibase.ui                             : ERROR: Exception Primary Class:  ChangeLogParseException
+2024-11-18T09:28:10.333-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] liquibase.ui                             : ERROR: Exception Primary Reason:  classpath:/db/changelog/db.changelog-master.yaml does not exist
+2024-11-18T09:28:10.333-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] liquibase.ui                             : ERROR: Exception Primary Source:  4.27.0
+2024-11-18T09:28:10.333-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] liquibase.command                        : Command execution complete
+2024-11-18T09:28:10.335-05:00  WARN 7792 --- [ArtesaniasYcoo] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: classpath:/db/changelog/db.changelog-master.yaml does not exist
+2024-11-18T09:28:10.336-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-18T09:28:10.342-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-18T09:28:10.347-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-18T09:28:10.357-05:00  INFO 7792 --- [ArtesaniasYcoo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-18T09:28:10.381-05:00 ERROR 7792 --- [ArtesaniasYcoo] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:/db/changelog/db.changelog-master.yaml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-11-18T09:28:45.450-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] b.d.a.A.ArtesaniasYcooApplication        : Starting ArtesaniasYcooApplication using Java 17.0.10 with PID 9012 (E:\SENA\SENAAA PROGRAMACION\CuartoTrimestre\Base Proyecto Spring\ArtesaniasYcoo\ArtesaniasYcoo\target\classes started by SENA in E:\SENA\SENAAA PROGRAMACION\CuartoTrimestre\Base Proyecto Spring\ArtesaniasYcoo)
+2024-11-18T09:28:45.456-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] b.d.a.A.ArtesaniasYcooApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-18T09:28:46.199-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-18T09:28:46.286-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 10 JPA repository interfaces.
+2024-11-18T09:28:46.970-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-18T09:28:46.989-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-18T09:28:46.989-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-18T09:28:47.083-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-18T09:28:47.083-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1575 ms
+2024-11-18T09:28:47.383-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-18T09:28:47.548-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d8cf9ac
+2024-11-18T09:28:47.550-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-18T09:28:47.959-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.changelog                      : Creating database history table with name: ARTESANIA_DBS.databasechangelog
+2024-11-18T09:28:48.082-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.changelog                      : Reading from ARTESANIA_DBS.databasechangelog
+2024-11-18T09:28:48.185-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2024-11-18T09:28:48.187-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.command                        : Using deploymentId: 1940128186
+2024-11-18T09:28:48.189-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.changelog                      : Reading from ARTESANIA_DBS.databasechangelog
+2024-11-18T09:28:48.204-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-master.yaml::1::tuNombre
+2024-11-18T09:28:48.226-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.changelog                      : Table usuario created
+2024-11-18T09:28:48.228-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-master.yaml::1::tuNombre ran successfully in 22ms
+2024-11-18T09:28:48.241-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.util                           : UPDATE SUMMARY
+2024-11-18T09:28:48.241-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.util                           : Run:                          1
+2024-11-18T09:28:48.241-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.util                           : Previously run:               0
+2024-11-18T09:28:48.241-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.util                           : Filtered out:                 0
+2024-11-18T09:28:48.241-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.util                           : -------------------------------
+2024-11-18T09:28:48.241-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.util                           : Total change sets:            1
+2024-11-18T09:28:48.242-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.util                           : Update summary generated
+2024-11-18T09:28:48.245-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.command                        : Update command completed successfully.
+2024-11-18T09:28:48.246-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 1
+2024-11-18T09:28:48.249-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-11-18T09:28:48.251-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] liquibase.command                        : Command execution complete
+2024-11-18T09:28:48.263-05:00  WARN 9012 --- [ArtesaniasYcoo] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties': Could not bind properties to 'JpaProperties' : prefix=spring.jpa, ignoreInvalidFields=false, ignoreUnknownFields=true
+2024-11-18T09:28:48.263-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-18T09:28:48.270-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-18T09:28:48.273-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-18T09:28:48.283-05:00  INFO 9012 --- [ArtesaniasYcoo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-18T09:28:48.298-05:00 ERROR 9012 --- [ArtesaniasYcoo] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.jpa.show-sql' to boolean:
+
+    Property: spring.jpa.show-sql
+    Value: "true               # Muestra las consultas SQL en la consola"
+    Origin: class path resource [application.properties] - 12:21
+    Reason: failed to convert java.lang.String to boolean (caused by java.lang.IllegalArgumentException: Invalid boolean value 'true               # Muestra las consultas SQL en la consola')
+
+Action:
+
+Update your application's configuration
+

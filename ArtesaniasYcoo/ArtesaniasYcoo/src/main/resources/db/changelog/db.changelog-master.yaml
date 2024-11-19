@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: usuario
+      changes:
+        - createTable:
+            tableName: producto
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: disponibilidad
+                  type: BIT(1)
+              - column:
+                  name: fecha_carga
+                  type: DATE
+              - column:
+                  name: personalizable
+                  type: BIT(1)
+              - column:
+                  name: precio
+                  type: DOUBLE
+              - column:
+                  name: artesano_id
+                  type: BIGINT
+              - column:
+                  name: nombre
+                  type: VARCHAR(100)
+              - column:
+                  name: categoria
+                  type: VARCHAR(255)
+              - column:
+                  name: descripcion
+                  type: VARCHAR(255)
+              - column:
+                  name: material
+                  type: VARCHAR(255)
