@@ -38,4 +38,121 @@ getProductsButton.addEventListener("click", async () => {
         console.error("Error fetching products:", error);
         messageDiv.innerHTML = `Error al obtener productos: ${error.message}`;
     }
+
 });
+
+    
+            document.addEventListener('DOMContentLoaded', function() {
+            
+                const carousel = document.querySelector('.carousel');
+            
+                const images = carousel.querySelectorAll('img');
+            
+                const prevButton = carousel.querySelector('.prev');
+            
+                const nextButton = carousel.querySelector('.next');
+            
+                let currentIndex = 0;
+            
+                let intervalId;
+            
+            
+                // Función para mostrar imagen
+            
+                function showImage(index) {
+            
+                    // Oculta todas las imágenes
+            
+                    images.forEach(img => img.classList.remove('active'));
+            
+                    
+            
+                    // Muestra la imagen actual
+            
+                    images[index].classList.add('active');
+            
+                }
+            
+            
+                // Función para siguiente imagen
+            
+                function nextImage() {
+            
+                    currentIndex++;
+            
+                    if (currentIndex >= images.length - 1) {
+            
+                        currentIndex = 0;
+            
+                    }
+            
+                    showImage(currentIndex);
+            
+                }
+            
+            
+                // Función para imagen anterior
+            
+                function prevImage() {
+            
+                    currentIndex--;
+            
+                    if (currentIndex < 0) {
+            
+                        currentIndex = images.length - 1;
+            
+                    }
+            
+                    showImage(currentIndex);
+            
+                }
+            
+            
+                // Evento para botón siguiente
+            
+                nextButton.addEventListener('click', () => {
+            
+                    nextImage();
+            
+                    resetAutoSlide();
+            
+                });
+            
+            
+                // Evento para botón anterior
+            
+                prevButton.addEventListener('click', () => {
+            
+                    prevImage();
+            
+                    resetAutoSlide();
+            
+                });
+            
+            
+                // Función para reiniciar el auto slide
+            
+                function resetAutoSlide() {
+            
+                    clearInterval(intervalId);
+            
+                    startAutoSlide();
+            
+                }
+            
+            
+                // Función para iniciar auto slide
+            
+                function startAutoSlide() {
+            
+                    intervalId = setInterval(nextImage, 10000); // Cambia cada 3 segundos
+            
+                }
+            
+            
+                // Inicia el auto slide
+            
+                startAutoSlide();
+            
+            });
+         
